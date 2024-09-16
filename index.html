@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Call Log Table</title>
+<!-- Include Bootstrap CSS -->
+<link href="./librabies/bootstrap-4.5.3-dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Include FrontAwesome -->
+<link rel="stylesheet" href="./librabies/fontawesome-free-5.15.4-web/css/all.min.css">
+
+<!-- Bootstrap Datepicker CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
+<link rel="stylesheet" href="./css/styles.css">
+<link rel="stylesheet" href="./css/columnFilter.css">
+</head>
+<body>
+
+
+
+<div class="table-container">
+    <div class="filter-bar">
+        <div class="filter-container">
+            <button id="applyFilters" class="btn ">Áp dụng</button>
+            <button id="clearFilters" class="btn ">Xóa bộ lọc</button>
+
+    
+            <input type="text" class="form-control datepicker" id="fromDate" placeholder="Thời gian gọi lần đầu từ ngày">
+            <input type="text" class="form-control datepicker" id="toDate" placeholder="Đến ngày">
+            <input type="text" class="form-control datepicker" id="lastCallFrom" placeholder="Thời gian gọi lần cuối từ ngày">
+            <input type="text" class="form-control datepicker" id="lastCallTo" placeholder="Đến ngày">
+            <button id="clearColumnFilters" class="btn ">Khôi phục dữ liệu</button>
+        </div>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th><input type="checkbox"></th>
+                <th>Tên KH</th>
+                <th>Phân hạng KH</th>
+                <th>Số gọi đến</th>
+                <th>Số lần gọi nhỡ</th>
+                <th>Thời gian gọi lần đầu</th>
+                <th>Thời gian gọi lần cuối</th>
+                <th>Thời điểm gọi xử lý</th>
+                <th>Nhân viên xử lý</th>
+                <th>Cuộc gọi lần cuối</th>
+                <th>Tình trạng</th>
+                <th>-</th>
+                <th>Nhánh dịch vụ</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- Dynamic content will go here -->
+        </tbody>
+    </table>
+    <div id="pagination"></div>
+    
+</div>
+<!-- Include jQuery -->
+<script src="./librabies/jquery.js"></script>
+
+<!-- Include Bootstrap JS -->
+<script src="./librabies/bootstrap-4.5.3-dist/js/bootstrap.min.js"></script>
+
+<!-- Bootstrap Datepicker JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+<!-- Script -->
+<script src="./js/stomp.js"></script>
+<script src="./js/createColumnFilter.js"></script>
+<script src="./js/messageHandler.js"></script>
+<script src="./js/createPhanCongButton.js"></script>
+
+
+</body>
+</html>
+
+

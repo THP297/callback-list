@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 12px;
+}
+
+td:has(input) {
+    text-align: center;
+}
+
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.filter-bar {
+    padding: 10px;
+    background-color: #f8f8f8; /* Light grey background */
+}
+
+.filter-container-right{
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+.filter-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.filter-container > button {
+    margin-right: 8px; /* Space between buttons */
+    margin-bottom: 5px; /* Space below buttons when wrapped */
+    font-size: 12px;
+    background-color: #f99d1c;
+    color: white;
+}
+
+.filter-container > input {
+    margin-right: 8px; /* Space between inputs */
+    margin-bottom: 5px; /* Space below inputs when wrapped */
+    width: 180px; /* Specific width for each input */
+    height: 30px; /* Specific height for each input */
+}
+
+@media (max-width: 768px) {
+    .filter-container {
+        justify-content: start; /* Centers items on smaller screens */
+    }
+}
+
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    white-space: nowrap;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+.pagination {
+    padding: 10px;
+    text-align: center;
+}
+
+.page-item {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 4px;
+    border-radius: 5px;
+    border: solid 1px #dddddd;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+.page-item.active {
+    background-color: #f99d1c;
+    color: white;
+}
+
+/* Targeting the placeholder in the datepicker input */
+.datepicker::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-size: 11px;
+    opacity: 1; /* Firefox */
+}
+
+.datepicker:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-size: 11px;
+}
+
+.datepicker::-ms-input-placeholder { /* Microsoft Edge */
+    font-size: 11px;
+}
+
+
+/* Custom style for the selected date */
+.datepicker table tr td.active, 
+.datepicker table tr td.active:hover, 
+.datepicker table tr td.active.disabled, 
+.datepicker table tr td.active.disabled:hover {
+    background: #46341D !important; /* Change this to your desired background color */
+    color: #ffffff; /* Optional: Change the text color */
+}
+
+/* Optional: Style for the selected date when the datepicker is focused */
+.datepicker table tr td.active:focus, 
+.datepicker table tr td.active:hover {
+    background: #46341D !important; /* Slightly different shade on hover */
+    color: #ffffff;
+}
+
+
+.datepicker{
+    font-size: 12px;
+}
+
+span[name="tooltip-callBack"]{
+    color: rgb(0, 174, 199);
+}
+
+a{
+    cursor: pointer;
+}

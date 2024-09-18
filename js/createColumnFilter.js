@@ -4,20 +4,21 @@
     const rowsPerPage = 5;  // Number of rows per page
     let allRows = [];        // Store all rows for pagination purposes
 
+    // Date range filters
+    var dateFilters = {
+        fromDate: null,
+        toDate: null,
+        lastCallFrom: null,
+        lastCallTo: null
+    };
+
+
     // Initialize Bootstrap Datepicker with the desired format (dd/mm/yyyy) and orientation at the bottom
     $('.datepicker').datepicker({
         format: 'dd/mm/yyyy',
         autoclose: true,
         todayHighlight: true,
     });
-
-    // Date range filters
-    let dateFilters = {
-        fromDate: null,
-        toDate: null,
-        lastCallFrom: null,
-        lastCallTo: null
-    };
 
     // Function to apply date range filters
     function applyDateFilters() {
